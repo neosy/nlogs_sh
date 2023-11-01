@@ -1,0 +1,15 @@
+[Unit]
+  Description=Copying logs to the server @Neosy
+  After=multi-user.target
+
+[Service]
+  User=user
+  Group=group
+  ExecStart=/usr/local/bin/sh_n/nlogs.sh -d
+  ExecReload=/bin/kill -s HUP $MAINPID
+  ExecStop=/bin/kill -s QUIT $MAINPID
+  Type=simple
+  Restart=on-failure
+
+[Install]
+  WantedBy=multi-user.target
