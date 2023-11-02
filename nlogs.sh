@@ -1,6 +1,6 @@
 #!/bin/bash
 # Version 0.2
-    # Change "cp -Rpu ...." on "cp -Ru ...."
+#   1. Change "cp -Rpu ...." on "cp -Ru ...."
 # Version 0.1
 
 FREQ=2m # frequency in sec
