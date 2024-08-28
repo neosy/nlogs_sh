@@ -30,10 +30,10 @@ function install_app
 
 function install_service
 {
-    copy_service nlogs.service 644
+    copy_service nlogs_sh.service 644
     if [ $? == 0 ]; then
-        sed -i -E "s/(  User=.*)/  User=$USER/g" $SERVICE_PATH/nlogs.service
-        sed -i -E "s/(  Group=.*)/  Group=$GROUP/g" $SERVICE_PATH/nlogs.service
+        sed -i -E "s/(  User=.*)/  User=$USER/g" $SERVICE_PATH/nlogs_sh.service
+        sed -i -E "s/(  Group=.*)/  Group=$GROUP/g" $SERVICE_PATH/nlogs_sh.service
     fi
 }
 
